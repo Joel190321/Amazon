@@ -8,7 +8,7 @@ import { Card, CardContent } from "@/components/ui/card"
 export default async function ProductPage({ params }) {
   const { id } = await params;
   const product = await getProductById(id);
-  const affiliateId = process.env.NEXT_PUBLIC_AMAZON_AFFILIATE_ID || 'your-affiliate-id';
+  const affiliateId = process.env.NEXT_PUBLIC_AMAZON_AFFILIATE_ID || 'picksmartshop-21';
 
   // Función para generar el enlace de Amazon
   const generateAmazonLink = (productId) => {
