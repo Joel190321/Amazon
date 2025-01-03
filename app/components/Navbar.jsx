@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { useAuth } from '../../hooks/useAuth';
 import { signInWithPopup } from 'firebase/auth';
 import { auth, googleProvider } from '../../firebase/config';
+
 import {
   Dialog,
   DialogContent,
@@ -45,9 +46,8 @@ export default function Navbar() {
             <Button variant="ghost" asChild>
               <Link href="/">Inicio</Link>
             </Button>
-            <Button variant="ghost" asChild>
-              <Link href="/productos">Productos</Link>
-            </Button>
+           
+          
             {isAdmin && (
               <Button variant="ghost" asChild>
                 <Link href="/admin/dashboard">

@@ -6,10 +6,10 @@ export default function HeroSection() {
     <div className="relative bg-gradient-to-r from-primary/10 via-primary/5 to-background overflow-hidden bg-hero">
       <div className="max-w-6xl mx-auto px-4 py-16 sm:py-24">
         <div className="text-center">
-          <h1 className="text-4xl font-extrabold tracking-tight text-primary sm:text-6xl mb-6">
+          <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-6xl mb-6">
             Descubre el Futuro Hoy
           </h1>
-          <p className="mt-6 text-xl leading-8 text-muted-foreground max-w-2xl mx-auto">
+          <p className="mt-6 text-xl leading-8 text-muted-foreground max-w-2xl mx-auto text-white">
             Sumérgete en un mundo de innovación y calidad. Nuestras recomendaciones 
             expertas te guiarán hacia productos que no solo cumplen, sino que superan 
             tus expectativas. Prepárate para transformar tu vida con tecnología de vanguardia.

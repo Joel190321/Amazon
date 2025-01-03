@@ -8,29 +8,22 @@ import { Card, CardContent } from "@/components/ui/card"
 export default async function ProductPage({ params }) {
   const { id } = await params;
   const product = await getProductById(id);
-  const affiliateId = process.env.NEXT_PUBLIC_AMAZON_AFFILIATE_ID || 'your-affiliate-id';
-
-  // Función para generar el enlace de Amazon
-  const generateAmazonLink = (productId) => {
-    if (!productId) return '#'; // Si no hay ID de producto, devolvemos un enlace vacío
-    return `https://www.amazon.com/dp/${productId}?tag=${affiliateId}`;
-  };
 
   if (!product) {
-    return <div>Producto no encontrado</div>;
+    return <div className="text-foreground">Producto no encontrado</div>;
   }
 
   const benefits = [
     "Envío rápido y gratuito con Amazon Prime",
     "Garantía de devolución de 30 días",
     "Producto verificado y de alta calidad",
-    "Soporte post-venta garantizado"
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
       <Navbar />
       <main className="max-w-6xl mx-auto px-4 py-8">
+      <div className="bg-card shadow-lg rounded-lg overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Columna de imagen */}
           <div className="space-y-6">
@@ -119,12 +112,12 @@ export default async function ProductPage({ params }) {
             <div className="space-y-4">
               <Button size="lg" className="w-full text-lg" asChild>
                 <a
-                  href={generateAmazonLink(product.amazonProductId)}
+                  href={product.affiliateLink}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <ShoppingCart className="mr-2 h-5 w-5" />
-                  Ver Precio en Amazon
+                  Ver en Amazon
                 </a>
               </Button>
               <p className="text-sm text-center text-muted-foreground">
@@ -132,6 +125,7 @@ export default async function ProductPage({ params }) {
               </p>
             </div>
           </div>
+        </div>
         </div>
       </main>
     </div>

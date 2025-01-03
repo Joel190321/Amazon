@@ -152,7 +152,7 @@ function ProductForm({ product, onSubmit }) {
     trending: false,
     recommended: false,
     featured: false,
-    amazonProductId: '' // Añadimos este campo
+    affiliateLink: '' // Cambiamos amazonProductId por affiliateLink
   })
 
   const handleChange = (e) => {
@@ -261,11 +261,11 @@ function ProductForm({ product, onSubmit }) {
         <Label htmlFor="featured">Destacado</Label>
       </div>
       <div>
-        <Label htmlFor="amazonProductId">ID de Producto Amazon</Label>
+        <Label htmlFor="affiliateLink">Enlace de Afiliado</Label>
         <Input 
-          id="amazonProductId" 
-          name="amazonProductId" 
-          value={formData.amazonProductId} 
+          id="affiliateLink" 
+          name="affiliateLink" 
+          value={formData.affiliateLink} 
           onChange={handleChange} 
           required 
         />
@@ -274,7 +274,3 @@ function ProductForm({ product, onSubmit }) {
     </form>
   )
 }
-
-
-
-      
