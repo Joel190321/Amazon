@@ -14,7 +14,7 @@ export default async function ProductPage({ params }) {
   }
 
   const benefits = [
-    "Envío rápido y gratuito con Amazon Prime",
+    "Envío rápido",
     "Garantía de devolución de 30 días",
     "Producto verificado y de alta calidad",
   ];
