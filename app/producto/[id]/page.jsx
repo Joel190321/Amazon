@@ -117,7 +117,7 @@ export default async function ProductPage({ params }) {
                   rel="noopener noreferrer"
                 >
                   <ShoppingCart className="mr-2 h-5 w-5" />
-                  Ver en Amazon
+                  Ver producto
                 </a>
               </Button>
               <p className="text-sm text-center text-muted-foreground">
