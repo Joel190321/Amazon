@@ -6,6 +6,7 @@ import FeaturedCategories from './FeaturedCategory';
 import { Separator } from "@/components/ui/separator"
 import { useEffect, useState } from 'react';
 import { getFeaturedProducts, getAllProducts } from '@/firebase/firestore';
+import  PrimeVideoPromo  from './PrimeVideoPromo'
 
 export default function HomeContent() {
   const { user, isAdmin, loading } = useAuth();
@@ -48,8 +49,9 @@ export default function HomeContent() {
 
   return (
     <main className="max-w-6xl mx-auto px-4 py-12">
+      <PrimeVideoPromo/>
       <section className="mb-16">
-        <h2 className="text-3xl font-bold mb-8 text-center text-primary">
+        <h2 className="text-3xl font-bold mb-8 text-center text-primary m-10">
           Descubre Mundos de Posibilidades
         </h2>
         <FeaturedCategories products={products} onCategorySelect={handleCategorySelect} selectedCategory={selectedCategory} />
