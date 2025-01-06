@@ -1,7 +1,7 @@
 'use client'
 
 import { Card, CardContent } from "@/components/ui/card"
-import { Laptop, Smartphone, Home, Headphones, Camera, Watch, Gamepad } from 'lucide-react'
+import { Laptop, Smartphone, Home, Headphones, Camera, Watch, Gamepad, Sparkles } from 'lucide-react'
 
 const categoryIcons = {
   "Tecnología": Laptop,
@@ -11,6 +11,7 @@ const categoryIcons = {
   "Fotografía": Camera,
   "Wearables": Watch,
   "Gaming": Gamepad,
+  "Cuidado Personal": Sparkles // Agregamos la nueva categoría
 }
 
 const categoryColors = {
@@ -21,6 +22,7 @@ const categoryColors = {
   "Fotografía": "text-yellow-500",
   "Wearables": "text-pink-500",
   "Gaming": "text-orange-500",
+  "Cuidado Personal": "text-rose-500" // Agregamos el color para la nueva categoría
 }
 
 export default function FeaturedCategories({ products, onCategorySelect, selectedCategory }) {
